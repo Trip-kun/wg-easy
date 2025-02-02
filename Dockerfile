@@ -1,7 +1,7 @@
 # nodejs 20 hangs on build with armv6/armv7 (https://github.com/nodejs/docker-node/issues/2077)
 FROM docker.io/library/node:18-alpine AS build
 WORKDIR /app
-
+ENV COREPACK_INTEGRITY_KEYS=0
 # Install pnpm
 RUN corepack enable pnpm
 
